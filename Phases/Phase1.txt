@@ -1,0 +1,33 @@
+🧱 Phase 1 Tech Stack (Local-first + OpenAI, Optimized)
+🌐 App Framework
+Next.js (App Router)
+🎨 UI / UX Layer
+Tailwind CSS
+shadcn/ui (clean components)
+💾 Local Database (REAL choice, not just generic)
+IndexedDB
+Wrapper: Dexie.js
+
+👉 Dexie makes local DB actually usable (important)
+
+📸 Image Pipeline (client-side)
+Browser File API
+Compression: browser-image-compression
+🧠 AI Layer
+OpenAI API
+Model: GPT (for feedback generation)
+⚙️ API Layer
+Next.js Route Handlers (server actions / API routes)
+🔄 State Management
+Zustand
+🧩 Data Fetching / Caching
+TanStack Query
+☁️ Deployment
+Vercel
+🔐 (Optional but clean)
+Local-only profile (no auth yet)
+🧭 Stack Philosophy
+Local-first → Dexie + IndexedDB
+Smooth UI → Tailwind + shadcn
+Minimal backend → Next.js only
+Controlled AI usage → OpenAI only when triggered
