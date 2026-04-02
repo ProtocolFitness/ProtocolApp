@@ -1,0 +1,263 @@
+🚀 APP NAME (placeholder)
+
+“Protocol”
+Tagline: Private hormone & peptide tracking
+
+🧱 MVP OVERVIEW
+Core principles:
+🔒 100% local-first (no account required)
+⚡ fast + minimal friction
+🧠 optional AI insights
+📊 data → trends → insights
+📱 CORE SCREENS (MVP)
+1. 🏠 Home / Dashboard
+4
+Purpose:
+
+Quick daily overview
+
+Components:
+Today’s date
+“Did you take your protocol?” (checkbox)
+Quick log buttons:
+Mood
+Energy
+Sleep
+Libido
+Cards:
+Next injection countdown
+Last lab summary
+Weekly averages
+2. 💉 Protocols Screen
+4
+Purpose:
+
+Manage TRT / peptides / supplements
+
+Features:
+List of active protocols
+Each shows:
+Compound name
+Dose
+Frequency
+Next dose time
+Actions:
+➕ Add protocol
+✏️ Edit
+🗑 Delete
+➕ Add Protocol Flow
+
+Fields:
+
+Compound name (autocomplete later)
+Category:
+TRT
+Peptide
+Supplement
+Dosage (mg / IU / mcg)
+Frequency:
+Daily
+Every X days
+Weekly (select days)
+Route:
+IM
+SubQ
+Oral
+Start date
+3. 📅 Log / Calendar
+4
+Purpose:
+
+Visual timeline of activity
+
+Features:
+Calendar view with markers:
+Injection days
+Missed doses
+Logged days
+Tap a day:
+
+Shows:
+
+Protocols taken
+Metrics
+Notes
+4. 📊 Labs Tracker
+4
+Purpose:
+
+Track bloodwork over time
+
+Features:
+Add lab entry:
+Test name (Test, E2, SHBG, etc.)
+Value
+Unit
+Date
+Graphs:
+Line chart per marker
+Toggle:
+Total Test
+Free Test
+E2
+5. 🧠 Insights (AI)
+4
+Purpose:
+
+Turn data into meaning
+
+Flow:
+Step 1:
+
+Button:
+👉 “Analyze last 30 days”
+
+Step 2:
+
+Preview screen:
+
+Labs summary
+Avg mood/energy
+Protocols
+
+Toggle:
+
+Include labs ✅
+Include symptoms ✅
+Include notes ❌
+Step 3:
+
+Call AI → return:
+
+Output:
+Key observations
+Possible causes
+Suggestions (non-medical tone)
+6. ⚙️ Settings
+Features:
+Export data (JSON)
+Import data
+Clear all data
+Privacy info
+🗄️ DATABASE (SQLite)
+Tables:
+protocols
+id
+name
+compound
+category
+dosage
+unit
+frequency_type
+frequency_value
+route
+start_date
+active
+logs
+id
+date
+protocol_id
+taken
+actual_dose
+daily_metrics
+id
+date
+mood
+energy
+libido
+sleep
+notes
+labs
+id
+date
+test_name
+value
+unit
+symptoms (optional MVP-lite)
+id
+date
+type
+severity
+ai_insights
+id
+date
+summary
+raw_response
+🔔 NOTIFICATIONS (LOCAL)
+“Injection due in 2 hours”
+“Log your day”
+“Missed dose reminder”
+
+👉 Use local notifications (no backend)
+
+🤖 AI PROMPT (MVP)
+
+Here’s a solid base prompt:
+
+You are a health tracking assistant focused on hormone optimization.
+
+Analyze the following user data and provide insights.
+
+IMPORTANT:
+- Do NOT give medical advice
+- Speak in observations, not prescriptions
+- Be concise and practical
+
+DATA:
+[insert structured JSON]
+
+OUTPUT:
+1. Key patterns
+2. Possible explanations
+3. Things to watch
+📦 EXPORT FORMAT
+
+JSON:
+
+{
+  "protocols": [],
+  "logs": [],
+  "labs": [],
+  "metrics": []
+}
+🎯 MVP FEATURE CHECKLIST
+Must-have:
+ Add/edit protocols
+ Log daily metrics
+ Track injections
+ Lab entry + graph
+ Local notifications
+ Export/import
+ AI insights (manual)
+NOT in MVP (avoid scope creep):
+❌ Social features
+❌ Cloud sync
+❌ Wearables
+❌ Auto lab parsing
+❌ Community stacks
+⏱️ REALISTIC BUILD TIMELINE
+Week 1:
+UI skeleton + database
+Protocol CRUD
+Week 2:
+Logging + calendar
+Notifications
+Week 3:
+Labs + graphs
+Week 4:
+AI + polish + export
+💡 FINAL ADVICE
+
+The difference between success and failure here is:
+
+👉 Speed + simplicity
+
+Don’t overbuild.
+Don’t overthink AI.
+Don’t add 20 features.
+
+Ship something that:
+
+Feels clean
+Works offline
+Solves tracking pain

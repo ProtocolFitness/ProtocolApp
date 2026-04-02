@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "PinAI",
+    "slug": "pinai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0F"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.pinai.app",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.pinai.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0A0A0F"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "name": "PinAI",
+      "shortName": "PinAI",
+      "lang": "en",
+      "themeColor": "#0A0A0F",
+      "backgroundColor": "#0A0A0F",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-notifications",
+      "expo-sqlite",
+      "expo-asset",
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "685f8bac-9222-43a1-918e-bfd6e071182b"
+      }
+    },
+    "owner": "bondalinga"
+  }
+}
